@@ -35,6 +35,10 @@ int main()
 
   std::getline(std::cin, youGood); //Just here for a brief pause
 
-  if (youGood == "screw you") {return 1;}
+  if (youGood == "screw you" || (howMany > 0 && youGood == "I desire more") ) 
+  {
+    std::cout << "YO!";
+    return 1;
+  }
   return 0;
 }
