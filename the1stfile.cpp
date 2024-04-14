@@ -1,6 +1,10 @@
 #include <iostream>
 #include <string>
 
+/* Remember That There is another source file that should be compiled *
+* ex: g++ the1stfile.cpp Drink.cpp
+*/
+
 struct GoudaSticks 
 {
   int amount;
