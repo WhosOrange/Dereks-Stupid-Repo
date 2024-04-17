@@ -67,6 +67,13 @@ int main()
     }
   }
 
+  std::cout << "May I get you a drink?\n";
+  std::getline(std::cin, youGood);
+  if (youGood == checkCase("Yes")) 
+  {
+    // make the drink here...
+  }
+
   std::getline(std::cin, youGood); //Just here for a brief pause
 
   if (youGood == "screw you" || (howMany > 0 && youGood == "I desire more") ) 
