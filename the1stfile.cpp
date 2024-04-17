@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include "stefansgoudaemporium.h"
 
 /* Remember That There is another source file that should be compiled *
 * ex: g++ the1stfile.cpp Drink.cpp
