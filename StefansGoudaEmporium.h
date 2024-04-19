@@ -12,4 +12,6 @@ struct SGE
   int employees;  // Employee Count
   Date established; // Date of Establishment
   float rating;
+  int tables;  // Tabels at the restaurant
+  int seats;  // Seats per table
 } SGE;
