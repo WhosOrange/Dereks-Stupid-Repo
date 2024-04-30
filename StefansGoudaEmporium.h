@@ -1,4 +1,5 @@
 // This is the header for Stefan's Gouda Emporium, the place of business that provides
+const std::string SGE_NAME = "Stefan's Gouda Emporium";
 
 struct Date
 {
