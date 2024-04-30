@@ -41,10 +41,15 @@ std::string checkCase(std::string checkMe)
 
 int main()
 {
-  std::cout << "Hello, welcome to Stefan's Gouda Emporioum!";
-  std::cout << "I'll bring you a drink.";
-  Drink yourDrink;
   std::string youGood;
+  std::cout << "Hello, welcome to " << SGE_NAME << "!";
+  
+  std::cout << "I'll bring you a drink. What would you like?\n";
+  std::getline(std::cin, youGood);
+  Drink yourDrink(youGood, 40);
+  if (youDrink.type == checkCase("none")) {yourDrink.howMany = 0; std::cout << "That's fine, maybe you'd like a drink later.";}
+  else {std::cout << "Please enjoy your " << yourDrink.type << ", my friend.";}
+  
   int howMany;
   std::cout << "How many gouda sticks would you like: ";
   std::cin >> howMany;
