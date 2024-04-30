@@ -41,6 +41,9 @@ std::string checkCase(std::string checkMe)
 
 int main()
 {
+  std::cout << "Hello, welcome to Stefan's Gouda Emporioum!";
+  std::cout << "I'll bring you a drink.";
+  Drink yourDrink;
   std::string youGood;
   int howMany;
   std::cout << "How many gouda sticks would you like: ";
