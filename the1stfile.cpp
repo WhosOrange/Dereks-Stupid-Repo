@@ -47,7 +47,7 @@ int main()
   std::cout << "I'll bring you a drink. What would you like?\n";
   std::getline(std::cin, youGood);
   Drink yourDrink(youGood, 40);
-  if (youDrink.type == checkCase("none")) {yourDrink.howMany = 0; std::cout << "That's fine, maybe you'd like a drink later.";}
+  if (yourDrink.type == checkCase("none")) {yourDrink.howMany = 0; std::cout << "That's fine, maybe you'd like a drink later.";}
   else {std::cout << "Please enjoy your " << yourDrink.type << ", my friend.";}
   
   int howMany;
@@ -57,6 +57,15 @@ int main()
   {
     std::cout << "\nFINE! Be like that then...";
   }
+  
+  // Waiting for your sticks
+  for (int i = yourDrink.amount; i > 0; i--)
+  {
+    std::cout << "[YOU TOOK A SIP OF YOUR " << yourDrink.type << "]" << "\n It will be " << i << " minutes until you Gouda Sticks come out.\n";
+    yourDrink.takeSip(1);
+    std::getline(std::cin, youGood);
+  }
+  
   std::cout << "How is your satisfaction: ";
   std::getline(std::cin, youGood);
   
