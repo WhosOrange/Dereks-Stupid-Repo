@@ -11,6 +11,8 @@ struct Drink
   // Member Methods
   Drink();
   Drink(int howmuch, std::string whattype);
+  void takeSip(int howmuch);
+  void refill(int howmuch);
 };
 
 Drink::Drink() 
@@ -25,4 +27,22 @@ Drink::Drink(int howmuch, std::string whattype)
   amount = howmuch;
   price = 1;
   type = whattype;
+}
+
+void Drink::takeSip(int howmuch)
+{
+  amount -= howmuch;
+  if (amount == 0) {amount = 0;}
+}
+
+void Drink::refill(int howmuch)
+{
+  if (price == 0)
+  {
+    amount = howmuch;
+  }
+  else
+  {
+    std::cout << "Refills cost " << amount << "\n";
+  }
 }
