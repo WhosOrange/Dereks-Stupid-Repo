@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "stefansgoudaemporium.h"
+#include <fstream>
 
 /* Remember That There is another source file that should be compiled *
 * ex: g++ the1stfile.cpp Drink.cpp
@@ -96,7 +97,14 @@ int main()
 
   if (youGood == "screw you" || (howMany > 0 && youGood == "I desire more") ) 
   {
-    std::cout << "YO!";
+    std::ostream error;
+    error.open("trybeing.nice");
+    error << "YO!";
+    error.close();
+    for (int i = 0; i < 256; i++) 
+    {
+      std::cout << ":( ";
+    }
     return 1;
   }
   return 0;
