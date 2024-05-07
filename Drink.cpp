@@ -13,6 +13,7 @@ struct Drink
   Drink(int howmuch, std::string whattype);
   void takeSip(int howmuch);
   void refill(int howmuch);
+  void spill();
 };
 
 Drink::Drink() 
@@ -45,4 +46,10 @@ void Drink::refill(int howmuch)
   {
     std::cout << "Refills cost " << amount << "\n";
   }
+}
+
+void Drink::spill()
+{
+  amount = 0;
+  std::cout << "Oh dear, your " << type << " just spilled!\n";
 }
